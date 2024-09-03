@@ -21,7 +21,7 @@ const Login = () => {
 
     function Register(){
         if(conpassword == password){
-            axios.post('https://myblogsdemo-2.onrender.com/Register',{
+            axios.post('https://myblogsdemo.onrender.com/Register',{
                 username : username,
                 email : email,
                 password : password,
@@ -46,7 +46,7 @@ const Login = () => {
     const Login = async () =>  {
         try{
             axios.defaults.withCredentials = true;
-            const response = await axios.post('https://myblogsdemo-2.onrender.com/login',{
+            const response = await axios.post('https://myblogsdemo.onrender.com/login',{
                 username: username,
                 password: password
             }, {

@@ -23,7 +23,7 @@ const Navbar = () => {
     useEffect(()=>{
         initializeTab()
         try {
-            const response = axios.get(`https://myblogsdemo-2.onrender.com/GetUser`, {
+            const response = axios.get(`https://myblogsdemo.onrender.com/GetUser`, {
                 withCredentials: true
             }).then((res) => {
                 setUser(res.data.users)
