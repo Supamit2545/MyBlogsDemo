@@ -28,7 +28,7 @@ const Blogs = () => {
     }
     
     const newpost = async () =>{
-        axios.post('http://localhost:3001/newpost',{
+        axios.post('https://myblogsdemo-2.onrender.com/newpost',{
             User : user,
             contents : contents,
             likes : 0,
@@ -37,14 +37,14 @@ const Blogs = () => {
         window.location.reload()
     }
     useEffect(()=>{
-        axios.get('http://localhost:3001/getpost')
+        axios.get('https://myblogsdemo-2.onrender.com/getpost')
         .then((res)=>{setBlogs(res.data)})
         .catch((err)=>{console.log(err)})
     },[])
     console.log(Blogs)
     useEffect(()=>{
         try {
-            const response = axios.get(`http://localhost:3001/GetUser`, {
+            const response = axios.get(`https://myblogsdemo-2.onrender.com/GetUser`, {
                 withCredentials: true
             }).then((res) => {
                 setUser(res.data.users)

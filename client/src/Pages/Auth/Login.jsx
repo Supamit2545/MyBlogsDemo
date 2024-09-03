@@ -21,7 +21,7 @@ const Login = () => {
 
     function Register(){
         if(conpassword == password){
-            axios.post('http://localhost:3001/Register',{
+            axios.post('https://myblogsdemo-2.onrender.com/Register',{
                 username : username,
                 email : email,
                 password : password,
@@ -46,7 +46,7 @@ const Login = () => {
     const Login = async () =>  {
         try{
             axios.defaults.withCredentials = true;
-            const response = await axios.post('http://localhost:3001/login',{
+            const response = await axios.post('https://myblogsdemo-2.onrender.com/login',{
                 username: username,
                 password: password
             }, {
@@ -57,7 +57,7 @@ const Login = () => {
                 console.log("Login successful!");
                 // ทำงานเมื่อ login สำเร็จ
             }
-            window.location.href = 'http://localhost:5173';
+            window.location.href = 'https://my-blogs-demo-rc7fvnx0p-supamit-phappusas-projects.vercel.app/';
         }catch(err){
             setMessage(err.response.data.message)
         }
