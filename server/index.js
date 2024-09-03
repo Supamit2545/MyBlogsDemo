@@ -16,13 +16,13 @@ port = 3001;
 const db_host = process.env.DB_HOST
 const db_user = process.env.DB_USER
 const db_password= process.env.DB_PASSWORD
-const db_databse = process.env.DB_DATABASE
+const db_datbase = process.env.DB_DATABASE
 
 const db = mysql.createConnection({
-    host: 'localhost',
-    user: "root",
-    password: "",
-    database: "MyBlogs"
+    host: db_host,
+    user: db_user,
+    password: db_password,
+    database: db_datbase
 });
 
 db.connect(function(err){
