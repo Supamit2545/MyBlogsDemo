@@ -1,0 +1,81 @@
+.anime-pop-cards{
+    display: flex;
+    justify-content: center;
+}
+.anime-pops-img{
+    width: 150px;
+    animation: rehoverimg 250ms ease forwards;
+}
+.pop-anime-cards{
+    width: 200px;
+}
+.anime-pops-img:hover{
+    animation: hoverimg 250ms ease-in forwards;
+}
+.anime-card-box{
+    margin-top: 2%;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 16px;
+}
+.anime-cards{
+    margin-left: auto;
+    margin-right: auto;
+    width: 200px;
+    height: 300px;
+}
+.img-anime{
+    animation: rehoverimg 250ms ease forwards;
+}
+.img-anime:hover{
+    animation: hoverimg 250ms ease-in forwards;
+    border: 5px inset rgb(0, 0, 43s);
+}
+.anime-search{
+    width: 800px;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    border-radius: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background: rgb(2, 2, 75);
+    justify-content: center;
+    gap: 20px;
+}
+.anime-search-input{
+    border-radius: 20px;
+    padding-right: 150px;
+    padding-left: 16px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: black;
+    font-weight: bold;
+}
+.anime-search-btn{
+    font-size: 70px;
+    color: lightgreen;
+}
+.anime-search-btn:hover{
+    color: green;
+}
+
+@keyframes hoverimg {
+    from{
+        transform: translateY(0px);
+        
+    }
+    to{
+        transform: translateY(-10px) translateX(-10px);
+    }
+}
+@keyframes rehoverimg {
+    from{
+        transform: translateY(-10px) translateX(-10px);
+    }
+    to{
+        transform: translateY(0px);
+    }
+}

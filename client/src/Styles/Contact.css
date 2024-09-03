@@ -1,0 +1,34 @@
+.Contact-container{
+    width: 100%;
+    background: rgba(0,0,43);
+}
+.Contacts{
+    color: white;
+    display: flex;
+    gap: 20px;
+    margin-top: 10%;
+    justify-content: center;
+}
+.Contacts-cards{
+    border: 2px solid white;
+    border-radius: 20px;
+    padding: 16px;
+    width: 300px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.Contacts-card-footer{
+    background: rgba(255, 255, 255, 0.178);
+    width: 100%;
+    color:white;
+    text-align: center;
+    font-weight: bold;
+    font-size: 25px;
+    border-radius: 10px;
+}
+
+@keyframes identifier {
+    
+}

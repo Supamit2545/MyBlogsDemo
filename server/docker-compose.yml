@@ -1,0 +1,29 @@
+version: '3.8'
+services:
+  db:
+    image: mysql:latest
+    environment:
+      MYSQL_ROOT_PASSWORD: yourpassword
+      MYSQL_DATABASE: yourdatabase
+      MYSQL_USER: youruser
+      MYSQL_PASSWORD: yourpassword
+    ports:
+      - "3306:3306"
+    volumes:
+      - db_data:/var/lib/mysql
+
+  app:
+    build: .
+    depends_on:
+      - db
+    environment:
+      DB_HOST: db
+      DB_PORT: 3306
+      DB_USER: youruser
+      DB_PASSWORD: yourpassword
+      DB_NAME: yourdatabase
+    ports:
+      - "3000:3000"  # พอร์ตที่แอปพลิเคชันของคุณรันอยู่
+
+volumes:
+  db_data:

@@ -1,0 +1,23 @@
+.Catoon-Container{
+    width: 100%;
+    background: rgb(0, 0, 43);
+    color: white;
+}
+.Catoon-cat{
+    background: rgb(0, 0, 92);
+}
+.catoon-tab{
+    font-size: 30px;
+    font-weight: bold;
+    font-family: monospace;
+}
+.catoon-tab.active{
+    color: lightgreen;
+    text-decoration: underline;
+}
+.Catoon-contents{
+    display: none;
+}
+.Catoon-contents.active{
+    display: block;
+}
